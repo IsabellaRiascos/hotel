@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block section %}
+ 	<h2>
+ 	Nombre:	{{ object.nombre }}
+ 		{% if object.nombre %}
+		{% else %}
+ 		{% endif %}
+ 	</h2>
+ 	<h2>
+
+ 	Apellido:	{{ object.apellido }}
+ 		{% if object.apellido %}
+		{% else %}
+ 		{% endif %}
+ 	</h2>
+ 	 <h2>
+ 	Telefono:	{{ object.telefono }}
+ 		{% if object.telefono %}
+		{% else %}
+ 		{% endif %}
+
+ 	</h2>
+ 	<h2>
+
+ 	Email:	{{ object.email }}
+ 		{% if object.email %}
+		{% else %}
+ 		{% endif %}
+ 	</h2>
+ 	
+ 	<a href="{% url "cliente-update" object.identificacion %}">Editar</a>
+ 	<a href="{% url "cliente-delete" object.identificacion %}">Eliminar</a>
+ 	<hr>
+{% endblock section %}
+
